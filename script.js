@@ -4,6 +4,8 @@ var context = canvas.getContext("2d");
 /* Image variables */
 var logo = new Image;
 
+var testMoveX = 0;
+
 Main();
 
 function initGame()
@@ -18,14 +20,14 @@ function drawImage(image, x, y, width, height)
 
 function update()
 {
-
+	testMoveX++;
 }
 
 function render()
 {
 	context.rect(20,20,150,100);
 	context.stroke();
-	drawImage(logo,180,80,128,128);
+	drawImage(logo,testMoveX,80,128,128);
 }
 
 function Main()
@@ -35,6 +37,7 @@ function Main()
 
 	var mainloop = function()
 	{
+		context.clearRect(0, 0, canvas.width, canvas.height);
 		update();
 		render();
 	};
