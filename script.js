@@ -4,5 +4,5 @@ Main();
 
 function Main()
 {
-	
+	console.log("Test");
 }
