@@ -17,6 +17,12 @@ var leftarrow = new Image();
 var rightarrow = new Image();
 var field = new Image();
 var circle = new Image();
+var block = new Image();
+
+var puck = {xpos:0,ypos:0,xvel:0,yvel:0};
+
+var player1FrontTile = {xpos:0,ypos:0,direction:0};
+var player1Blocks = [player1FrontTile];
 
 var testMoveX = 0;
 var testMoveY = 0;
@@ -32,6 +38,7 @@ function initGame()
 	rightarrow.src = "./gfx/rightarrow.svg";
 	field.src = "./gfx/field.svg";
 	circle.src = "./gfx/circle.svg";
+	block.src = "./gfx/block.svg";
 }
 
 function drawImage(image, x, y, width, height)
@@ -66,6 +73,17 @@ function update()
 
 function render()
 {
+	var xx = 0;
+	while (xx < canvas.width)
+	{
+		var yy = 0;
+		while(yy < canvas.height)
+		{
+			drawImage(block,xx,yy,16,16);
+			yy += 16;
+		}
+		xx += 16;
+	}
 	drawImage(field,0,0,canvas.width,canvas.height);
 	//context.rect(20,20,150,100);
 	//context.stroke();
