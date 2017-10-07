@@ -85,7 +85,7 @@ function render()
 	}*/
 
 	var x = canvas.width - (64/512)*canvas.width;
-	var y = (42/512)*canvas.height;
+	var y = (48/512)*canvas.height;
 	while(y < canvas.height)
 	{
 		drawImage(rightarrow,x + t,y,tilesX,tilesY);
@@ -93,7 +93,7 @@ function render()
 	}
 
 	var x = (32/512)*canvas.width;
-	var y = (42/512)*canvas.height;
+	var y = (48/512)*canvas.height;
 	while(y < canvas.height)
 	{
 		drawImage(leftarrow,x - t,y,tilesX,tilesY);
